@@ -40,11 +40,11 @@ A autenticação via Discord OAuth2 vincula cada jogador às suas partidas ativa
    - Na aba **OAuth2**:
      - Copie o **Client ID** e gere o **Client Secret**.
      - Em **Redirects**, adicione a URL exata do deploy:
-       `https://p26-2b-1768-7598-7d8e-716e.pages.dev/api/auth/discord/callback`
+       `https://avalia2026-2-6bv.pages.dev/api/auth/callback`
    - No painel do seu projeto no Cloudflare Pages:
-     - Acesse **Settings** → **Environment variables**.
-     - Adicione as variáveis de ambiente:
+     - Acesse **Settings** → **Variables and secrets**.
+     - Crie as duas variáveis com o tipo **Secret** (como o projeto usa `wrangler.jsonc`, o painel só aceita Secrets):
        - `DISCORD_CLIENT_ID`
-       - `DISCORD_CLIENT_SECRET`
+       - `DISCORD_CLIENT_SECRET` 
 6. Atualize o campo **URL_CLOUDFLARE** no topo deste `README.md` com o endereço público gerado pela Cloudflare.
 7. Na raiz do repositório, execute `node validar-local.mjs P26-2B-1768-7598-7D8E-716E` para validar todos os critérios antes de fazer o commit e abrir o Pull Request.
