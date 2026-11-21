@@ -62,4 +62,6 @@ function placing() {
   };
   const fits = (name, r, c) => {
     const cs = cellsOf({ name, r, c, o: orient });
-    const used = new Set(fleet.filter((s) => s.name
+    const used = new Set(fleet.filter((s) => s.name !== name).flatMap(cellsOf).map(([a, b]) => a * 10 + b));
+    return { cs, valid: cs.every(([a, b]) => a < 10 && b < 10 && !used.has(a * 10 + b)) };
+  };
