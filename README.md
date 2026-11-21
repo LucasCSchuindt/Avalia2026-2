@@ -15,6 +15,7 @@ Aluno: Lucas Carneiro Schuindt · Turma 2B · RA 2026108691
 - Build output directory: `public`
 - Binding D1 com nome `DB`
 - Variáveis: `DISCORD_CLIENT_ID` e `DISCORD_CLIENT_SECRET` (secret)
+- URL_CLOUDFLARE:** `https://avalia2026-2-6bv.pages.dev`
 
 ## Licença
 MIT
